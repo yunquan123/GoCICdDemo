@@ -32,7 +32,7 @@ jobs: #Job to execute on event
       uses: actions/checkout@v2
       with:
         repository: lowkh2/GoSchoolRemoteExample #the hidden repo I am trying to access
-        path: virtualRepo #folder to save to in my virtual env
+        path: virtualRepoFolder #folder to save to in my virtual env
         token: ${{ secrets.GO_SECRET }}  #Pass to enter remote hidden repo
     
     - name: Show hidden files
