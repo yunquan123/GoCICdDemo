@@ -47,4 +47,4 @@ jobs: #Job to execute on event
         go get github.com/tebeka/go2xunit  #Adds package for conversion
         go test -v #Command to run go test
         go test -v | go2xunit > report.xml  #run test again and output 
-        ls
+        ls #verify that the report is indeed created
