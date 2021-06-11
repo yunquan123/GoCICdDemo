@@ -19,3 +19,11 @@ jobs: #Job to execute on event
         go-version: 1.16.5 #optional
     - name: show Go version
       run: go version
+
+    - name: Checkout our codes
+      uses: actions/checkout@v2
+      
+    - name: Check file system
+      run: |
+        ls
+        cat calc.go #prints the content of calc.go
