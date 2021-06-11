@@ -5,7 +5,7 @@ on:  #on event keyword
 jobs: #Job to execute on event
   my-job:
     name: My Job
-    runs-on: ubuntu-latest # specify OS in virtual machine
+    runs-on: ubuntu-16.04 # specify OS in virtual machine
     steps:
     - name: Print a greeting
       run: |
