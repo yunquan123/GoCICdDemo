@@ -51,6 +51,6 @@ jobs: #Job to execute on event
     
     - name: Publish Unit Test Results
       uses: EnricoMi/publish-unit-test-result-action@v1 #Check Unit Test Reporting
-      if: always(). #always do it
+      if: always() #always do it
       with:
         files: report.xml #make use of a file we created
