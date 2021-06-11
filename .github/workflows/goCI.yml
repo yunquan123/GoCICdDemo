@@ -45,4 +45,4 @@ jobs: #Job to execute on event
       run: |
         go get github.com/franela/goblin #Adds package for Goblin testing
         go get github.com/tebeka/go2xunit  #Adds package for conversion
-        go test -v. #Command to run go test
+        go test -v #Command to run go test
