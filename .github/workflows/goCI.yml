@@ -54,3 +54,13 @@ jobs: #Job to execute on event
       if: always() #always do it
       with:
         files: report.xml #make use of a file we created
+
+    - if: ${{ failure() }}
+      name: Create Issues Notifications
+      uses: nashmaniac/create-issue-action@v1.1
+      with:
+          title: Build Failed
+          token: ${{secrets.GITHUB_TOKEN}} # default token in GitHub Workflow
+          assignees: ${{github.actor}} # actor who started the workflow
+          labels: workflow-failed
+          body: Workflow failed for commit ${{github.sha}}
