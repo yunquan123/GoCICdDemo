@@ -27,3 +27,17 @@ jobs: #Job to execute on event
       run: |
         ls
         cat calc.go #prints the content of calc.go
+    
+    - name: Checkout private repo remotely
+      uses: actions/checkout@v2
+      with:
+        repository: lowkh2/GoSchoolRemoteExample #the hidden repo I am trying to access
+        path: remoteRepo #folder to save to in my virtual env
+        token: ${{ secrets.GO_SECRET }}  #Pass to enter remote hidden repo
+    
+    - name: Show hidden files
+      run: |
+        cd virtualRepofolder # to access the folder of interest in my virtual emv
+        ls
+        cat myText.txt # show content of file of interest
+        cd ..
