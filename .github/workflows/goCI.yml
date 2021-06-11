@@ -37,7 +37,7 @@ jobs: #Job to execute on event
     
     - name: Show hidden files
       run: |
-        cd virtualRepofolder # to access the folder of interest in my virtual emv
+        cd virtualRepoFolder # to access the folder of interest in my virtual emv
         ls
         cat myText.txt # show content of file of interest
         cd ..
