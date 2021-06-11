@@ -2,6 +2,9 @@ name: CI setup for Go. #Name the workflow
 on:  #on event keyword
   push:
     branches: [main]  #identifying branch
+  pull_request:
+    branches: [main]
+    
 jobs: #Job to execute on event
   my-job:
     name: My Job
